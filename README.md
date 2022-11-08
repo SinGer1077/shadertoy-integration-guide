@@ -55,3 +55,15 @@ void main(void) - вход программы, её обязательно ос�
 ![image](https://user-images.githubusercontent.com/35637110/200529303-66ebf89f-e0ea-41c4-8977-df5166cfca34.png)
 
 ## Вариант 2: glslCanvas
+### Использование в чистом canvas'е
+1. Заходим на репозиторий https://github.com/patriciogonzalezvivo/glslCanvas
+2. В нужном нам html файле добавляем строку <canvas class="glslCanvas" data-fragment-url="shader.frag" width="500" height="500"></canvas>. Фрагментный шейдер можно использовать или через аттрибут "data-fragment-url", указав путь к файлу .frag, или черз аттрибут "data-fragment", указав в нём весь код шейдера.
+В первом случае могут быть проблемы из-за CORS policy.
+4. Для использования glslCanvas нужно использоват GlslCanvas.js скрипт. Достучаться до него можно двумся способами:
+  - Указать ссылкой: <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+  - Сделать npm install glslCanvas в нужную папку, затем указать путь до скрипта: <script type="text/javascript" src="node_modules/glslCanvas/lib/GlslCanvas.js"></script>
+5. Результат:
+
+![image](https://user-images.githubusercontent.com/35637110/200546176-e2ea3889-fac5-415b-8565-376bd883e06a.png)
+
+6. 
